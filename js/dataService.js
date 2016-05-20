@@ -7,12 +7,12 @@ angular.module("MyApp").service("DataService", function(){
   this.getErrands = function(){
     var errArray = JSON.parse(localStorage.getItem("errandsLS")) || [];
     errandsArray = errArray;
-    return errArray;
+    return errandsArray;
   };
 
   this.saveErrand = function(eName,edueDate,estatus){
-    var saveErrands = {errand: eName, dueDate:edueDate, status:estatus };
-    errandsArray.push(saveErrands);
+    var savedErrands = {errand: eName, dueDate:edueDate, status:estatus };
+    errandsArray.push(savedErrands);
     localStorage.setItem("errandsLS", JSON.stringify(errandsArray));
   };
 

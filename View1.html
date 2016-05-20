@@ -4,13 +4,13 @@
   <form>
 
     <label>Errand:</label>
-    <input type="text" ng-model="newErrand.errand">
+    <input type="text" ng-model="newErrand.errand"></input>
 
     <label>Due Date:</label>
-    <input type="text" ng-model="newErrand.dueDate">
+    <input type="text" ng-model="newErrand.dueDate"></input>
 
     <label>Status:</label>
-    <input type="text" ng-model="newErrand.status">
+    <input type="text" ng-model="newErrand.status"></input>
 
     <button ng-click= "addErrand()">Add Errand</button>
     <button ng-click= "clearIt()">Clear All Lists</button>
@@ -25,7 +25,7 @@
 
   <!-- Display Data -->
   <div ng-repeat="errand in errands track by $index">
-    <button ng-click="removeErrand($index)">&times:</button>
+    <button ng-click="removeErrand($index)">&times;</button>
     <strong>{{erand.errand}}</strong>
     {{errand.dueDate}}, {{errand.status}}
   </div>

@@ -35,7 +35,7 @@ var myLists = angular.module("MyApp", ['ngRoute'])
 //CHORE controller
 }).controller("choresCntrlr", function($scope,DataService){
   "use strict";
-  $scope.chores = DataService.getchores();
+  $scope.chores = DataService.getChores();
   $scope.newChore = {};
 //ADD CHORE
   $scope.addChore = function(){
@@ -43,10 +43,10 @@ var myLists = angular.module("MyApp", ['ngRoute'])
     $scope.newChore = {};
   };
 
+
   $scope.deleteChore = function(choreToDelete) {
     DataService.removeChore(choreToDelete);
   };
-
   //CALL/EMAIL controller
 }).controller("emailCntrlr",function($scope,$routeParams,DataService){
   "use strict";
@@ -80,4 +80,4 @@ var myLists = angular.module("MyApp", ['ngRoute'])
   $scope.deleteCall=function(call) {
     DataService.removeCall(call);
   };
-})
+});

@@ -13,7 +13,7 @@
     <p>New Email: {{emailArray.length}}<p>
       <ul>
         <li ng-repeat="noEmail in emailArray track by $id($index)">{{noEmail}}
-          <button ng-click="deleteEmail(noEmail)">&times</button>
+          <button ng-click="deleteEmail(noEmail)">&times;</button>
         </li>
       </ul>
   </div>
@@ -35,7 +35,7 @@
     <p>New Calll: {{callsArray.length}}<p>
       <ul>
         <li ng-repeat="noCall in callsArray track by $id($index)">{{noCall}}
-          <button ng-click="deleteCall(noCall)">&times</button>
+          <button ng-click="deleteCall(noCall)">&times;</button>
         </li>
       </ul>
   </div>
