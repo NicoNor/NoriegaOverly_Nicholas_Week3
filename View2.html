@@ -1,0 +1,33 @@
+<section ng-controller="choresCntrlr">
+  <!-- Get Data -->
+  <h2>Chores:</h2>
+  <form>
+
+    <label>Chore Name</label>
+    <input type="text" ng-model="newChore.name">
+
+    <label>Chore Due Date:</label>
+    <input type="text" ng-model="newChore.dueDate">
+
+    <label>Chore Status:</label>
+    <input type="text" ng-model="newChore.status">
+
+    <button ng-click= "addErrand()">Add Errand</button>
+    <button ng-click= "clearIt()">Clear All Lists</button>
+
+  </form>
+
+  <!--Displays CHORES while typing-->
+  <p>New Chore: {{newChore.name}}<br>
+     New Chore Date: {{newChore.dueDate}}<br>
+     New Chore Status: {{newChore.status}}
+  </p>
+
+  <!-- Display Data -->
+  <div ng-repeat="showChore in chores track by $index">
+    <button ng-click="deleteChore($index)">&times:</button>
+    <p>Chore Name: {{showChore.name}}<br>
+      Due Date: {{showChore.dueDate}}<br>
+      Status: {{showChore.status}}
+    </p>
+  </div>

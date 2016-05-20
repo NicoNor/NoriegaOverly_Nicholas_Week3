@@ -1,0 +1,44 @@
+<section ng-controller="emailCntrlr">
+  <h2>Emails:</h2>
+  <p>Im the email controller. Did you say route paramaters? <b> Here it is:</b> {{anyWord}}</p>
+
+  <form>
+
+    <input id="emails" type="text" ng-model="email"/>
+    <input type="submit" ng-click="addEmail()"/>
+
+  </form>
+
+  <div>
+    <p>New Email: {{emailArray.length}}<p>
+      <ul>
+        <li ng-repeat="noEmail in emailArray track by $id($index)">{{noEmail}}
+          <button ng-click="deleteEmail(noEmail)">&times</button>
+        </li>
+      </ul>
+  </div>
+
+
+<!-- CALLS -->
+
+  <h2>Calls:</h2>
+  <p>I'm the call controller. Did you say route paramters? <b>Here it is:</b> {{anyWord}}</p>
+
+  <form>
+
+    <input id="calls" type="text" ng-model="calls"/>
+    <input type="submit" ng-click="addCalls()"/>
+
+  </form>
+
+  <div>
+    <p>New Calll: {{callsArray.length}}<p>
+      <ul>
+        <li ng-repeat="noCall in callsArray track by $id($index)">{{noCall}}
+          <button ng-click="deleteCall(noCall)">&times</button>
+        </li>
+      </ul>
+  </div>
+
+
+</section>

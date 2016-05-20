@@ -1,0 +1,32 @@
+<section ng-controller="errandCntrlr">
+  <h2>Errands:</h2>
+  <!--Get Data-->
+  <form>
+
+    <label>Errand:</label>
+    <input type="text" ng-model="newErrand.errand">
+
+    <label>Due Date:</label>
+    <input type="text" ng-model="newErrand.dueDate">
+
+    <label>Status:</label>
+    <input type="text" ng-model="newErrand.status">
+
+    <button ng-click= "addErrand()">Add Errand</button>
+    <button ng-click= "clearIt()">Clear All Lists</button>
+
+  </form>
+
+  <!--Displays CHORES while typing-->
+  <p>New Errand: {{newErrand.errand}}<br>
+     New Date: {{newErrand.dueDate}}<br>
+     New Status: {{newErrand.status}}
+  </p>
+
+  <!-- Display Data -->
+  <div ng-repeat="errand in errands track by $index">
+    <button ng-click="removeErrand($index)">&times:</button>
+    <strong>{{erand.errand}}</strong>
+    {{errand.dueDate}}, {{errand.status}}
+  </div>
+</section>
